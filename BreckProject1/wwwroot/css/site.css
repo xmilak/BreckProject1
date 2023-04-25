@@ -16,3 +16,16 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.trailstable {
+    background-image: url('https://pixabay.com/get/g14c6f0e57d6b57acc2ca5304c490e911d7502cff87ce9c7d46eaf7ab870b6e5f254c36f865e67e37baf1ce329daffd61.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+table {
+    background-color: rgba(255, 255, 255, 0.7); /* Use a semi-transparent white background */
+    color: #000; /* Set the text color to black */
+    padding: 10px; /* Add some padding to the background */
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 0 rgba(10, 11, 14, 0.6);
+}
