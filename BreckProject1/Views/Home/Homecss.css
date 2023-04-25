@@ -1,0 +1,10 @@
+﻿body {
+    background-color:red;
+}
+.my-element {
+    background-image: url("https://breckenridge.skyrun.com/images/Breck_Photos/breckenridge_ski_area_trail_map-2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+

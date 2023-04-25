@@ -1,0 +1,28 @@
+﻿@model Trails
+
+<h3>@Model.TrailName Information</h3>
+
+<table class="table">
+    <tr>
+        <th>Trail Number</th>
+        <th>Trail Name</th>
+        <th>Get To</th>
+        <th>Gondola Direction</th>
+        <th>Parking Direction</th>
+        <th>Is Opened</th>
+        <th>Peak</th>
+    </tr>
+    <tr>
+        <td>@Model.TrailNumber</td>
+        <td>@Model.TrailName</td>
+        <td>@Model.GetTo</td>
+        <td>@Model.GondolaDirection</td>
+        <td>@Model.ParkingDirection</td>
+        <td>@Model.IsOpened</td>
+        <td>@Model.Peak</td>
+    </tr>
+</table>
+
+<div style="display: block">
+    <a href="/Trail/UpdateTrail/@Model.TrailNumber">Update this Trail</a>
+</div>

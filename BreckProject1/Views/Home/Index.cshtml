@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Breckenridge GPS"] - Breckenrige GPS</title>
+    <link rel="stylesheet" href="Homecss.css"/>
+</head>
+    <body>
+        <div class="text-center">
+            
+            <h1 class="display-4">Breckenridge Forecast</h1>
+            <p>@Model.summary3Day</p>
+            <div>
+                <h2>Pick which peak you would like to get info about:</h2>
+                <div>
+                    <a href="@Url.Action("Index", "Trails", new { peak = "8" })"><button>Peak 8</button></a>
+                    <a href="@Url.Action("Index", "Trails", new { peak = "9" })"><button>Peak 9</button></a>
+                    <br />
+                    <label>Add a Comment</label>
+                    <input type="text" id="comment" name="comment" />
+                    <button id="submitComment">Submit</button>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
