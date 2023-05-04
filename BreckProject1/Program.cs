@@ -1,6 +1,8 @@
 using BreckProject1;
 using MySql.Data.MySqlClient;
+using System.Configuration;
 using System.Data;
+using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +15,7 @@ builder.Services.AddScoped<IDbConnection>((s) =>
     return conn;
 });
 builder.Services.AddTransient<ITrailsRepo, TrailsRepo>();
-//builder.Services.AddTransient<ITrailsRepo, TrailsRepo>();
+builder.Services.AddTransient<CommentRepository>(sp => new CommentRepository(builder.Configuration.GetConnectionString("breckenridge")));
 builder.Services.AddSingleton<HttpClient>();
 
 var app = builder.Build();

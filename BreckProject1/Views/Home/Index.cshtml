@@ -6,7 +6,6 @@
 </head>
 <body style="font-weight: bold;">
     <div class="text-center">
-
         <h1 class="display-4">Breckenridge Forecast</h1>
         <p>@Model.summary3Day</p>
         <div>
@@ -20,7 +19,26 @@
                 <button id="submitComment">Submit</button>
             </div>
         </div>
+        @*<div>
+            <h2>Comments</h2>
+            <ul id="commentsList">
+                @foreach (var comment in Model.Comments)
+                {
+                    <li>@comment.Text - @comment.CreatedAt.ToShortDateString()</li>
+                }
+            </ul>
+        </div>*@
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#submitComment").click(function () {
+                var comment = $("#comment").val();
+                $.post("/Comment/AddComment", { "Text": comment }, function () {
+                    alert("Thanks for your comment")
+                });
+            });
+        });
+    </script>
 </body>
-
 </html>

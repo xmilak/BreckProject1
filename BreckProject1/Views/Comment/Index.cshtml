@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Comment>
+<body class="trailstable">
+    <h2 class="Comments">Comment</h2>
+
+    <div style="display: block">
+        <a href="/Comment/">Breck Trails</a>
+    </div>
+
+
+<table>
+    <tr>
+        <th>Comment</th>
+    </tr>
+    @foreach (var comment in @Model)
+    {
+        <tr>
+            <td>@comment.Text</td>
+        </tr>
+    })
+</table>
+</body>
